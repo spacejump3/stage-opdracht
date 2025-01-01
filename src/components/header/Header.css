@@ -1,0 +1,17 @@
+:root {
+    --lightgrey-color: #f4f4f4;
+}
+
+header {
+    max-width: 100%;
+    padding: 3rem var(--padding-left-right);
+
+    background-color: var(--lightgrey-color);
+
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        object-fit: contain;
+    }
+}

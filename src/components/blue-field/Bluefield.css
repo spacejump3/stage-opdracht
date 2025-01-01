@@ -1,0 +1,19 @@
+.blueField {
+    position: relative;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.volgendeBtn, .vorigeBtn {
+    transform: translateY(50%);
+}
+
+.volgendeBtn {
+    bottom: 0;
+    right: 5%;
+}
+
+.vorigeBtn {
+    bottom: 0;
+    left: 5%;
+}

@@ -1,0 +1,90 @@
+:root {
+    --radio-body: #eef7ff;
+    --radio-outline: #c7e5ff;
+}
+
+fieldset {
+    display: flex;
+    gap: 1rem;
+    border: none;
+}
+
+fieldset label {
+    margin: 0;
+    padding: 1rem;
+
+    background-color: white;
+    width: 10em;
+    height: 15em;
+    border-radius: var(--std-border-radius);
+    color: #0005;
+
+    display: block;
+    align-content: end;
+
+    transition: .15s;
+
+    input {
+        margin: 0 1rem;
+        opacity: 0;
+    }
+
+    background-size: cover;
+
+    &:before {
+        content: '✖';
+        display: block;
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--radio-body);
+        border-radius: 100%;
+        opacity: .3;
+        text-align: center;
+        outline: solid var(--radio-outline) 1px;
+        font-weight: 100;
+
+    }
+
+    &:hover, :focus {
+        box-shadow: .5em .5em 1em #0002;
+        cursor: pointer;
+        transform: translateY(-.2rem);
+    }
+
+}
+
+.img-hidden {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, white 90%), url(../../assets/hidden-corner.png);
+}
+
+.img-umove {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, white 90%), url(../../assets/u-move-corner.png);
+}
+
+fieldset:has(input:checked) label {
+    color: #000;
+    box-shadow: .5em .5em 1em #0002;
+    &:before {
+        content: '✓';
+        color: var(--color-main);
+        opacity: 1;
+        font-weight: 700;
+        outline: none;
+        animation: checkAnimation .2s linear ;
+    }
+}
+
+@keyframes checkAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

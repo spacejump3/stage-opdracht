@@ -1,0 +1,32 @@
+:root {
+    --background-color: #e5f2ff;
+    --normal-text-color: grey;
+}
+
+.laadpunt-text {
+    max-width: 25rem;
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.page {
+    background-color: var(--background-color);
+    border-radius: var(--std-border-radius);
+    color: var(--normal-text-color);
+
+    margin: 2rem 0;
+    padding: 5rem 2rem;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 1rem;
+    
+    max-width: 100%;
+}

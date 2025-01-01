@@ -1,0 +1,27 @@
+.laadpunt-list {
+    display: flex;
+    gap: 2rem;
+
+    ul {
+        margin: 0 0 2rem 0;
+        list-style: none;
+    }
+
+    li {
+        line-height: 2rem;
+
+        &::first-letter {
+            color: var(--color-main);
+            font-weight: 900;
+        }
+    }
+
+    div p {
+        color: var(--color-main);
+    }
+
+    div p:nth-of-type(2) {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
