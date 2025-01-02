@@ -1,11 +1,10 @@
-import './Img-list.css';
+import './Imglist.css';
 
 // assets
 
-
 function Imglist({price, img}) {
 	return (
-		<div className='laadpunt-list'>
+		<div className='imgList'>
 			<img src={img} alt='afbeelding van een Bluecurrent laadpaal' />
 
 			<div>

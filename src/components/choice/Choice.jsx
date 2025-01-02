@@ -1,11 +1,11 @@
 import './Choice.css'
 
-function Choice({laadpuntText, imgContent, value, onChange}) {
+function Choice({choiceText, imgContent, value, onChange}) {
     return (
         <fieldset>
             <label className={imgContent}>
                 <input type="radio" name="choice" value={value} onChange={onChange} />
-                {laadpuntText}
+                {choiceText}
             </label>
         </fieldset>
     )

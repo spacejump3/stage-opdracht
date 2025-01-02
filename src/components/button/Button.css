@@ -30,7 +30,7 @@ button {
     }
 }
 
-.volgendeBtn {
+.nextBtn {
     /* display: block; */
     position: absolute;
     width: 14rem;
@@ -45,7 +45,7 @@ button {
     }
 }
 
-.vorigeBtn {
+.previousBtn {
     /* display: block; */
     position: absolute;
     width: 8rem;

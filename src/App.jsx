@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-import Header from './components/header/Header.jsx';
+import Header from './components/Header/Header.jsx';
 
-import Bluefield from './components/blue-field/Bluefield.jsx';
-import Page1 from './components/pages/page-1.jsx';
-import Page2 from './components/pages/page-2.jsx';
+import Container from './components/Container/Container.jsx';
+import Step1 from './components/Steps/Step1.jsx';
+import Step2 from './components/Steps/Step2.jsx';
 import Button from './components/Button/Button.jsx';
 
 function App() {
@@ -34,12 +34,12 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Bluefield >
-				{currentStep === 1 && (<Page1 handleSelection={handleSelection} />)}
-				{currentStep === 2 && (<Page2 currentChoice={currentChoice} />)}
-				<Button btnType='volgendeBtn' text='Volgende' onClick={incrementStep} disabled={!currentChoice ? true : false}/>
-				<Button btnType='vorigeBtn' text='Vorige' onClick={decrementStep} />
-			</Bluefield>
+			<Container >
+				{currentStep === 1 && (<Step1 handleSelection={handleSelection} />)}
+				{currentStep === 2 && (<Step2 currentChoice={currentChoice} />)}
+				<Button btnType='nextBtn' text='Volgende' onClick={incrementStep} disabled={!currentChoice ? true : false}/>
+				<Button btnType='previousBtn' text='Vorige' onClick={decrementStep} />
+			</Container>
 		</>
 	);
 }
