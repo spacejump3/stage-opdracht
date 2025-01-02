@@ -1,5 +1,5 @@
 :root {
-  --padding-left-right: 10rem;
+  --padding-left-right: 8rem;
   --std-border-radius: 8px;
   --color-main: dodgerblue;
 }
@@ -11,6 +11,13 @@
 
 main {
   padding: 0 var(--padding-left-right);
+  transition: .1s;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 0 2rem;
+  }
 }
 
 body {

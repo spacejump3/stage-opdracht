@@ -72,3 +72,10 @@ button {
         }
     }
 }
+
+@media (max-width: 800px) {
+    .nextBtn, .previousBtn {
+      font-size: .8rem;
+      width: 7rem;
+    }
+}
