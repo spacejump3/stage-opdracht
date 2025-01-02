@@ -3,19 +3,22 @@ import Form from '../form/Form.jsx';
 import Introtext from '../intro-text/Intro-text.jsx';
 import Imglist from '../img-list/Img-list.jsx';
 
-function Page2() {
-	return (
-		<>
-        <div className='page'>
-            <div className='laadpunt-text'>
-                <Introtext blueText='Motorhuis laadpunt samenstellen' titleText='Gefeliciteerd!' paragraph='Je hebt een pracht oplaadpunt samengesteld! Vul jouw gegevens in en wij nemen graag jouw setting door. Tot snel!' />
+import laadpaal from '../../assets/laadpaal.png';
+import hidden from '../../assets/hidden.png';
 
-                {/* laadpunt + list */}
-                <Imglist price='€1.658' />
-            </div>
-            <Form />
-        </div>
-		</>
+function Page2({currentChoice}) {
+	return (
+		<div className='page'>
+			<div className='laadpunt-text'>
+				<Introtext blueText='Motorhuis laadpunt samenstellen' titleText='Gefeliciteerd!' paragraph='Je hebt een pracht oplaadpunt samengesteld! Vul jouw gegevens in en wij nemen graag jouw setting door. Tot snel!' />
+
+				{/* laadpunt + list */}
+				{/* <Imglist price='€1.658' img={hidden}/> */}
+                {currentChoice === '1' && (<Imglist price='€1.558' img={hidden}/>)}
+                {currentChoice === '2' && (<Imglist price='€1.658' img={laadpaal}/>)}
+			</div>
+			<Form />
+		</div>
 	);
 }
 

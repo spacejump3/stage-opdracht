@@ -23,6 +23,11 @@ button {
         cursor: pointer;
         background-color: var(--button-highlight);
     }
+
+    &:disabled {
+        background-color: rgb(141, 178, 215);
+        cursor: not-allowed;
+    }
 }
 
 .volgendeBtn {
