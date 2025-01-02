@@ -1,0 +1,28 @@
+.bar {
+    position: absolute;
+    top: 0;
+    left: 3rem;
+    transform: translateY(-50%);
+    width: 10rem;
+    height: 1rem;
+    background-color: var(--color-main);
+
+    border-radius: 100rem;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 3.5rem;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    aspect-ratio: 1;
+    background-color: var(--color-main);
+
+    border-radius: 100rem;
+
+    font-size: .8rem;
+    text-align: center;
+    align-content: center;
+    color: white;
+}

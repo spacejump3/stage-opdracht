@@ -6,6 +6,7 @@ import Container from './components/Container/Container.jsx';
 import Step1 from './components/Steps/Step1.jsx';
 import Step2 from './components/Steps/Step2.jsx';
 import Button from './components/Button/Button.jsx';
+import Progressbar from './components/Progressbar/Progressbar.jsx';
 
 function App() {
 	const [currentStep, setCurrentStep] = useState(1);
@@ -35,6 +36,7 @@ function App() {
 		<>
 			<Header />
 			<Container >
+				<Progressbar currentStep={currentStep} />
 				{currentStep === 1 && (<Step1 handleSelection={handleSelection} />)}
 				{currentStep === 2 && (<Step2 currentChoice={currentChoice} />)}
 				<Button btnType='nextBtn' text='Volgende' onClick={incrementStep} disabled={!currentChoice ? true : false}/>
