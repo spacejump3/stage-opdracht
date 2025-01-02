@@ -37,7 +37,7 @@ function App() {
 			<Header />
 			<Container >
 				<Progressbar currentStep={currentStep} />
-				{currentStep === 1 && (<Step1 handleSelection={handleSelection} />)}
+				{currentStep === 1 && (<Step1 handleSelection={handleSelection} currentChoice={currentChoice} />)}
 				{currentStep === 2 && (<Step2 currentChoice={currentChoice} />)}
 				<Button btnType='nextBtn' text='Volgende' onClick={incrementStep} disabled={!currentChoice ? true : false}/>
 				<Button btnType='previousBtn' text='Vorige' onClick={decrementStep} />
