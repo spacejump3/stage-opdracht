@@ -6,22 +6,23 @@ function Form() {
 		<form>
 			<label>
 				Naam
-				<input type='text' placeholder='Voornaam' />
-				<input type='text' placeholder='Achternaam' />
+				<input type='text' placeholder='Voornaam' required />
+				<input type='text' placeholder='Achternaam' required />
+				<span dataError='Vul uw voornaam in'></span>
 			</label>
 
 			<label>
 				Contact
-				<input type='tel' placeholder='Telefoonnummer' />
-				<input type='email' placeholder='E-mail' />
+				<input type='number' placeholder='Telefoonnummer' required />
+				<input type='email' placeholder='E-mail' required />
 			</label>
 
 			<label>
 				Adres
-				<input type='text' placeholder='Straatnaam + huisnr.' />
+				<input type='text' placeholder='Straatnaam + huisnr.' required pattern='^(?=.*[A-Za-z])(?=.*\d).+$' />
 				<div className='adres'>
-					<input type='text' placeholder='Postcode' />
-					<input type='text' placeholder='Plaats' />
+					<input type='text' placeholder='Postcode' required pattern='^\d{4}[A-Za-z]{2}$' />
+					<input type='text' placeholder='Plaats' required pattern='^[^0-9]+$' />
 				</div>
 			</label>
 			<div className='submit-button'>

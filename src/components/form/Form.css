@@ -2,6 +2,12 @@
     --input-accent-color: #b1cde9;
     --input-main-color: rgba(229, 242, 255, 0.14);
 
+    --invalid-accent-color: #e9c9b1;
+    --invalid-main-color: rgba(255, 243, 229, 0.14);
+
+    --valid-accent-color: #b1e9b7;
+    --valid-main-color: rgba(229, 255, 232, 0.14);
+
     --input-accent-focus-color: dodgerblue;
 }
 
@@ -51,6 +57,24 @@ input {
         background-color: white;
         color: black;
     }
+
+    &:user-invalid:not(:focus-visible) {
+        outline: solid var(--invalid-accent-color) 1px;
+        background-color: var(--invalid-main-color);
+    
+        &::placeholder {
+            color: var(--invalid-accent-color);
+        }
+    }
+    
+    &:user-valid:not(:focus-visible) {
+        outline: solid var(--valid-accent-color) 1px;
+        background-color: var(--valid-main-color);
+    
+        &::placeholder {
+            color: var(--valid-accent-color);
+        }
+    }
 }
 
 .adres {
@@ -77,4 +101,13 @@ a {
 form p {
     font-size: .7rem;
     padding-top: .5rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
 }
